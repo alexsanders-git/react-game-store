@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 
 import Header from './components/header';
 import HomePage from './pages/home-page';
+import GamePage from './pages/game-page';
 import { store } from './store';
 
 
@@ -17,7 +18,8 @@ function App() {
           <Header />
 
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route exact path="/" element={<HomePage />} />
+            <Route exact path="/app/:title" element={<GamePage />} />
           </Routes>
 
         </div>
